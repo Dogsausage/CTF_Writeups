@@ -1,26 +1,35 @@
-# 🚩 CTF Writeups & Wargame Logs
+# 🚩 CTF Writeups & Technical Logs
 
-![Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20Forensics-black?style=for-the-badge&logo=hackthebox)
+![Focus](https://img.shields.io/badge/Focus-Cybersecurity%20%7C%20Forensics-black?style=for-the-badge&logo=kali-linux)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-พื้นที่สำหรับรวบรวมบันทึกการเจาะระบบ, การแก้โจทย์ Capture The Flag (CTF), และ Wargames 
+พื้นที่สำหรับรวบรวมบันทึกการเรียนรู้, การเจาะระบบ (Exploitation), การตรวจพิสูจน์พยานหลักฐานดิจิทัล (Forensics) และคลังสคริปต์สำหรับทดสอบช่องโหว่
 
-Repository นี้ไม่ได้มีจุดประสงค์เพื่อการแปะ "เฉลย (Flag)" เพียงอย่างเดียว แต่เน้นไปที่การบันทึก **กระบวนการคิด (Methodology)** ทำความเข้าใจพฤติกรรมของระบบ และเจาะลึกการทำงานของคำสั่งต่างๆ อย่างเป็นขั้นเป็นตอน
-
-## 📂 Active Campaigns
-
-### [OverTheWire: Bandit](./OverTheWire%20|%20Bandit)
-Wargame ระดับตำนานสำหรับฝึกฝนทักษะ Linux Command Line เบื้องต้นและการทำความเข้าใจสิทธิการเข้าถึงไฟล์ (Permissions)
-- **CTF:** กำลังลุยทะลวงด่าน (🚀 จะทยอยอัปเดต Writeup ลง Repo)
-- **Focus Area:** Navigation, Text Processing, File Permissions, และ Networking Basics
+Repository นี้เน้นไปที่การบันทึก **กระบวนการคิด (Methodology)** ทำความเข้าใจพฤติกรรมของระบบ และเจาะลึกการทำงานของคำสั่ง เครื่องมือ หรือซอร์สโค้ดอย่างเป็นขั้นเป็นตอน เพื่อใช้สำหรับการทบทวนและพัฒนาทักษะในสายงาน Security
 
 ## 🧠 Writeup Methodology
 
-เพื่อให้ง่ายต่อการทบทวนความรู้และเป็นระบบ บันทึกทุกไฟล์ในคลังนี้จะถูกจัดโครงสร้างอย่างชัดเจน:
-
-*   **🎯 Goal:** กำหนดเป้าหมายหรือเงื่อนไขหลักของโจทย์ในด่านนั้นๆ
-*   **⚙️ The Logic:** อธิบายตรรกะ วิธีคิด และขั้นตอนการใช้คำสั่งเพื่อแก้ปัญหา (ทำไมถึงใช้คำสั่งนี้ ทำงานอย่างไร)
-*   **💎 New Loot:** สรุปเทคนิค สัญลักษณ์พิเศษ หรือคอนเซปต์ใหม่ที่เก็บเกี่ยวได้จากด่านนี้ เพื่อนำไปประยุกต์ใช้ในอนาคต
+บันทึกทุกไฟล์ในคลังนี้จะถูกจัดโครงสร้างอย่างเป็นระบบ:
+*   **🎯 Goal:** กำหนดเป้าหมาย ช่องโหว่ หรือโจทย์หลักที่ต้องแก้ไข
+*   **⚙️ The Logic:** อธิบายตรรกะ วิธีคิด และขั้นตอนการทำงาน (ทำไมถึงใช้เทคนิคนี้/คำสั่งนี้)
+*   **💎 New Loot:** สรุปเทคนิค Payload หรือคอนเซปต์ใหม่ที่เก็บเกี่ยวได้เพื่อนำไปต่อยอด
 
 ## 📁 Repository Structure
 ```text
+.
+├── README.md                                # ภาพรวมของคลังและสารบัญ (ไฟล์นี้)
+│
+├── 🛡️ 01-Web-Exploitation                    # บันทึกการเจาะระบบเว็บแอปพลิเคชัน & CTF Labs
+│   ├── SQL-Injection-Scripts/               # สคริปต์สำหรับโจมตีช่องโหว่ SQLi และดึงฐานข้อมูล
+│   └── Auth-Bypass-Techniques/              # เทคนิคและสคริปต์การข้ามระบบยืนยันตัวตน
+│
+├── 🕵️‍♂️ 02-Digital-Forensics                 # ฝั่ง Defensive Security & Investigation
+│   └── Network-Forensics/                   # การตรวจทราฟฟิกเครือข่ายและวิเคราะห์ Log
+│       └── Wireshark-PCAP-Analysis/         # บันทึกการแกะและตามรอยแพ็กเก็ตจากไฟล์ PCAP
+│
+├── 🔑 03-Cryptography                       # ศาสตร์การเข้ารหัสและการถอดรหัสข้อมูล
+│   └── Hash-Analysis/                       # การวิเคราะห์และแกะรหัสผ่าน (MD5, SHA Cracking)
+│
+└── 🛠️ 04-Kali-Linux-and-Custom-Toolkit     # คลังแสงและเครื่องมือทุ่นแรงบน Terminal
+    ├── Terminal-Cheatsheets/                # รวมคำสั่งลัดและการควบคุม Terminal บน Kali Linux
+    └── Payload-Templates/                   # รวมซอร์สโค้ดต้นแบบสำหรับใช้ทดสอบระบบ
